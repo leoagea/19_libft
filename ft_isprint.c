@@ -6,13 +6,13 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:54:18 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 02:21:14 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/20 02:38:05 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	if (c >= 9 && c <= 13)
 		return (0);
