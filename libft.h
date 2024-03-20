@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 01:27:07 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/20 01:37:05 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 #ifdef LIBFT_H
 
 int ft_is_alpha (int c);
+int ft_isdigit (char c);
 
 #endif LIBFT_H
