@@ -6,13 +6,13 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:42:10 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 17:57:45 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/20 21:18:13 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
 	char	buff;

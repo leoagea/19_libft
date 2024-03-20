@@ -6,13 +6,13 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:03:58 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 17:11:45 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/20 21:18:14 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memset(void *str, int c, size_t n)
+void	*ft_memset(void *str, int c, size_t n)
 {
 	size_t	i;
 	char	*cpy;
