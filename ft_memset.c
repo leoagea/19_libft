@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 17:11:43 by lagea            ###   ########.fr       */
+/*   Created: 2024/03/20 17:03:58 by lagea             #+#    #+#             */
+/*   Updated: 2024/03/20 17:11:45 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define LIBFT_H
-#ifdef LIBFT_H
+#include "libft.h"
 
-#include <stddef.h>
+void	*memset(void *str, int c, size_t n)
+{
+	size_t	i;
+	char	*cpy;
 
-int ft_isalpha (int c);
-int ft_isdigit (char c);
-int	ft_isascii(char c);
-int	ft_isalnum(char c);
-int	ft_isprint(char c);
-int	ft_tolower(int c);
-int	ft_toupper(int c);
-void	*memset(void *str, int c, size_t n);
-
-size_t	ft_strlen(const char *s);
-
-#endif LIBFT_H
+	i = -1;
+	cpy = str;
+	while (++i < n)
+		cpy[i] = c;
+	return (str);
+}
