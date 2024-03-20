@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 17:57:05 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/20 18:24:11 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	ft_isalnum(char c);
 int	ft_isprint(char c);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
+char	*ft_strchr(const char *str, int c);
 void	ft_bzero(void *str, size_t n);
 void	*memset(void *str, int c, size_t n);
 void    *memmove(void *dst, const void *src, size_t len);
