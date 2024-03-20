@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 22:39:32 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/20 23:03:06 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 char    *ft_strdup(const char *s1);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
+char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 
 void	ft_bzero(void *str, size_t n);
 void	*calloc(size_t count, size_t size);
