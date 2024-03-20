@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 23:42:29 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/20 23:59:42 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len);
 
 
 size_t	ft_strlen(const char *s);
+size_t strlcat(char * dst, const char * src, size_t dstsize);
 size_t  ft_strlcpy(char * dst, const char * src, size_t dstsize);
-
 
 #endif LIBFT_H
