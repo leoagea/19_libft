@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 00:10:01 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 01:05:26 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/21 01:12:56 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,4 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	new_s[i] = '\0';
 	return (new_s);
-}
-
-int	main(void)
-{
-	char *string = "Test de substr";
-
-	printf("%s\n", ft_substr(string, 6, 4));
 }
