@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 23:46:57 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/22 00:13:06 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/22 00:19:43 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
         return NULL;
     while (s [index])
     {
-        new_s [index] = f(index,s [index]);
+        new_s [index] = (*f)(index,s [index]);
         index++;
     } 
     new_s [index] = '\0';
