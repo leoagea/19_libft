@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 19:47:56 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/21 19:49:39 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*ft_strrchr(const char *str, int c);
 char	*ft_strnstr(const char *str, const char *to_find, size_t len);
 
 void	ft_bzero(void *str, size_t n);
-void	*calloc(size_t count, size_t size);
+void	*ft_calloc(size_t count, size_t size);
 void	*ft_memset(void *str, int c, size_t n);
 void    *ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
@@ -43,7 +43,7 @@ void    *ft_memmove(void *dst, const void *src, size_t len);
 
 
 size_t	ft_strlen(const char *s);
-size_t strlcat(char * dst, const char * src, size_t dstsize);
+size_t  ft_strlcat(char * dst, const char * src, size_t dstsize);
 size_t  ft_strlcpy(char * dst, const char * src, size_t dstsize);
 
 /*fonctions additionnelles*/
