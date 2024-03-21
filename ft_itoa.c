@@ -6,11 +6,13 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 19:25:36 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 19:47:45 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/21 21:41:11 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/// TODO : gerer les nombres negatifs
 
 char	*ft_itoa(int n)
 {
