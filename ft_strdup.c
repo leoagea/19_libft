@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:12:24 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 21:33:58 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/21 01:06:27 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ char	*ft_strdup(const char *s1)
 		return (NULL);
 	ft_memcpy(cpy, s1, len);
 	cpy[len] = '\0';
-	return (s1);
+	return (cpy);
 }

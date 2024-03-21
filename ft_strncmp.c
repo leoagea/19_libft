@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 23:04:27 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 23:18:41 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/21 01:07:02 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-    int i;
+    size_t i;
 
     i = 0;
     if (n == 0)

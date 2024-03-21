@@ -6,13 +6,13 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:50:47 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 02:21:15 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/21 01:05:20 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(char c)
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

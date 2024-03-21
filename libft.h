@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 23:59:42 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/21 01:04:40 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@
 #include <stddef.h>
 #include <stdlib.h>
 
+/*Libc functions*/
 int ft_isalpha (int c);
-int ft_isdigit (char c);
-int	ft_isascii(char c);
-int	ft_isalnum(char c);
-int	ft_isprint(char c);
+int ft_isdigit (int c);
+int	ft_isascii(int c);
+int	ft_isalnum(int c);
+int	ft_isprint(int c);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
 int	ft_atoi(const char *str);
@@ -45,4 +46,7 @@ size_t	ft_strlen(const char *s);
 size_t strlcat(char * dst, const char * src, size_t dstsize);
 size_t  ft_strlcpy(char * dst, const char * src, size_t dstsize);
 
-#endif LIBFT_H
+/*fonctions additionnelles*/
+char    *ft_substr(char const *s, unsigned int start,size_t len);
+
+#endif 

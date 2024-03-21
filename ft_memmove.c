@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:42:10 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/20 21:18:13 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/21 01:05:53 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t	i;
-	char	buff;
 
 	i = -1;
 	if (!dst && !src)

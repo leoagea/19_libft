@@ -1,36 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/20 22:40:54 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 01:07:39 by lagea            ###   ########.fr       */
+/*   Created: 2024/03/21 00:10:01 by lagea             #+#    #+#             */
+/*   Updated: 2024/03/21 01:05:26 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *str, const char *to_find, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	char	*new_s;
 
 	i = 0;
-	j = 0;
-	if (len == 0)
+    if (start >= ft_strlen(s))
+        len = 0;
+    else if (len > ft_strlen(s + start))
+		len = ft_strlen(s + start);
+	new_s = (char *)malloc((len + 1) * sizeof(char));
+	if (!new_s)
 		return (NULL);
-	if (*to_find == '\0')
-		return ((char *)str);
-	while (str[i] && i < len)
+	while (s[start + i] && i < len)
 	{
-		j = 0;
-		while (str[i + j] == to_find[j] && to_find[j] && str[i + j])
-			j++;
-		if (j == ft_strlen(to_find))
-			return ((char *)str + i);
+		new_s[i] = s[start + i];
 		i++;
 	}
-	return (NULL);
+	new_s[i] = '\0';
+	return (new_s);
+}
+
+int	main(void)
+{
+	char *string = "Test de substr";
+
+	printf("%s\n", ft_substr(string, 6, 4));
 }
