@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 19:54:16 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/21 20:10:13 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <stdlib.h>
+#include <fcntl.h>
 
 /*Libc functions*/
 int ft_isalpha (int c);
@@ -54,7 +55,7 @@ char	**ft_split(char const *s, char c);
 char    *ft_strjoin(char const *s1, char const *s2);
 char    *ft_substr(char const *s, unsigned int start,size_t len);
 
-void ft_putchar_fd(char c, int fd);
+void    ft_putchar_fd(char c, int fd);
 
 
 #endif 
