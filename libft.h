@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 23:44:31 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/22 00:13:45 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ char	**ft_split(char const *s, char c);
 char    *ft_strjoin(char const *s1, char const *s2);
 char    *ft_strtrim(char const *s1, char const *set);
 char    *ft_substr(char const *s, unsigned int start,size_t len);
+char    *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void    ft_putchar_fd(char c, int fd);
 void    ft_putstr_fd(char *s, int fd);
