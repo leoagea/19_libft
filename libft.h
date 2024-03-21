@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 01:04:40 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/21 15:12:40 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ size_t strlcat(char * dst, const char * src, size_t dstsize);
 size_t  ft_strlcpy(char * dst, const char * src, size_t dstsize);
 
 /*fonctions additionnelles*/
+char    *ft_strjoin(char const *s1, char const *s2);
 char    *ft_substr(char const *s, unsigned int start,size_t len);
 
 #endif 
