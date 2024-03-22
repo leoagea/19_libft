@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/22 22:56:24 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/22 23:22:37 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,7 @@ typedef struct s_list
 }t_list;
 
 s_list *ft_lstnew(void *content);
+
+void	ft_lstadd_front(s_list **lst, s_list *new);
 
 #endif 
