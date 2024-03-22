@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/22 00:21:51 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/22 22:56:24 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,15 @@ void    ft_putstr_fd(char *s, int fd);
 void    ft_putendl_fd(char *s, int fd);
 void    ft_putnbr_fd(int n, int fd);
 void    ft_striteri(char *s, void (*f)(unsigned int, char*));
+
+/*Partie bonus*/
+
+typedef struct s_list
+{
+    void            *content;
+    struct s_list   *next;
+}t_list;
+
+s_list *ft_lstnew(void *content);
 
 #endif 
