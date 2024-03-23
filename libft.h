@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/22 23:22:37 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/23 23:12:28 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,15 @@ typedef struct s_list
     struct s_list   *next;
 }t_list;
 
-s_list *ft_lstnew(void *content);
+t_list  *ft_lstnew(void *content);
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
-void	ft_lstadd_front(s_list **lst, s_list *new);
+int ft_lstsize(t_list *lst);
+
+void	ft_lstadd_front(t_list **lst,t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void    ft_lstdelone(t_list *lst, void (*del)(void*));
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 
 #endif 
