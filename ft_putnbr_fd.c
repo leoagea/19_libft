@@ -6,25 +6,32 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 21:34:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 21:47:05 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/24 02:24:35 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	print_nb(long n, int fd)
 {
-    char *nbr;
-
-    nbr = ft_itoa(n);
-    ft_putstr_fd(nbr, fd);
+	if (n / 10)
+	{
+		print_nb(n / 10, fd);
+		print_nb(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }
 
-int main (void)
+void	ft_putnbr_fd(int n, int fd)
 {
-    int fichier;
+	long	nbr;
 
-    fichier = open("test.txt", O_RDWR);
-    ft_putnbr_fd(-155,fichier);
-    close(fichier);
+	nbr = (long)n;
+	if (nbr < 0)
+	{
+		write(fd, "-", 1);
+		nbr = -nbr;
+	}
+	print_nb(nbr, fd);
 }
