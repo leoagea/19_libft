@@ -6,14 +6,13 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 19:25:36 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 22:21:12 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/24 02:08:34 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/// TODO : gerer les nombres negatifs
-int	int_len(int n)
+int	int_len(long n)
 {
 	size_t	len_nbr;
 
@@ -36,21 +35,28 @@ int	int_len(int n)
 char	*ft_itoa(int n)
 {
 	size_t	len_nbr;
+	long 	cast_n;
+	int 	is_neg;
 	char	*nbr;
 
-	len_nbr = int_len(n);
+	is_neg = 0;
+	cast_n = (long) n;
+	len_nbr = int_len((long) n);
 	nbr = (char *)malloc((len_nbr + 1) * sizeof(char));
+	if (!nbr)
+		return NULL;
 	if (n < 0)
 	{
-		n = -n;
+		cast_n = -cast_n;
 		nbr[0] = '-';
+		is_neg = 1;
 	}
 	nbr[len_nbr] = '\0';
-	while (n != 0)
+	while (len_nbr > (size_t) is_neg)
 	{
+		nbr[len_nbr - 1] = (cast_n % 10) + 48;
+		cast_n /= 10;
 		len_nbr--;
-		nbr[len_nbr] = (n % 10) + 48;
-		n /= 10;
 	}
 	return (nbr);
 }
