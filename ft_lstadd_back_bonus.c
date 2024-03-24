@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 00:22:05 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/23 22:44:32 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/24 00:16:20 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,12 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
     t_list *last;
 
-    if (!lst)
-        return NULL;
     if (*lst == NULL)
     {
         *lst = new;
         return;
     }
-    last = ft_lstlast(lst);
+    last = ft_lstlast(*lst);
     last->next = new;
 }
 
