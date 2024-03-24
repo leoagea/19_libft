@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 19:03:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 01:10:17 by lagea            ###   ########.fr       */
+/*   Updated: 2024/03/24 19:24:07 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *str, int c)
 	while (len >= 0)
 	{
 		if (str [len] == (char) c)
-			return (((char *)str - len));
+			return (((char *)str + len));
 		len--;
 	}
 	return (NULL);
