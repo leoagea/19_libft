@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 00:10:01 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/21 01:12:56 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/10 12:54:55 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*new_s;
 
 	i = 0;
-    if (start >= ft_strlen(s))
-        len = 0;
-    else if (len > ft_strlen(s + start))
+	if (start >= ft_strlen(s))
+		len = 0;
+	else if (len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
 	new_s = (char *)malloc((len + 1) * sizeof(char));
 	if (!new_s)

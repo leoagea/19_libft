@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 19:03:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/24 19:24:07 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/10 12:55:05 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,11 @@
 char	*ft_strrchr(const char *str, int c)
 {
 	int	len;
-    
-    len = ft_strlen(str);
+
+	len = ft_strlen(str);
 	while (len >= 0)
 	{
-		if (str [len] == (char) c)
+		if (str[len] == (char)c)
 			return (((char *)str + len));
 		len--;
 	}

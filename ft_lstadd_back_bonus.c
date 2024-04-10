@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 00:22:05 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/24 00:16:20 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/10 13:34:53 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,30 +14,29 @@
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list *last;
+	t_list	*last;
 
-    if (*lst == NULL)
-    {
-        *lst = new;
-        return;
-    }
-    last = ft_lstlast(*lst);
-    last->next = new;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		return ;
+	}
+	last = ft_lstlast(*lst);
+	last->next = new;
 }
 
 /*int main(void)
 {
-    t_list *lst;
-    t_list *new;
+	t_list	*lst;
+	t_list	*new;
 
-    lst = ft_lstnew((void*)15);
-    new->content = (void*) 30;
-    new->next = NULL;
-    ft_lstadd_back(&lst,new);
-    //ft_lstadd_front(&lst,new);
-
-    //while(lst->next != NULL)
-    //printf("%d\n",lst->content);
-    //printf("%d\n",ft_lstsize(lst));
+	lst = ft_lstnew((void*)15);
+	new->content = (void*) 30;
+	new->next = NULL;
+	ft_lstadd_back(&lst,new);
+	//ft_lstadd_front(&lst,new);
+	//while(lst->next != NULL)
+	//printf("%d\n",lst->content);
+	//printf("%d\n",ft_lstsize(lst));
 }
 */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 23:05:46 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/24 00:18:17 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/10 13:35:32 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *new_lst;
-	t_list *new_node;
+	t_list	*new_lst;
+	t_list	*new_node;
 
 	if (!lst)
-		return NULL;
+		return (NULL);
 	new_lst = NULL;
 	while (lst)
 	{

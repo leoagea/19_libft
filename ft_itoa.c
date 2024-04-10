@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 19:25:36 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/24 02:08:34 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/10 12:48:56 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ int	int_len(long n)
 char	*ft_itoa(int n)
 {
 	size_t	len_nbr;
-	long 	cast_n;
-	int 	is_neg;
+	long	cast_n;
+	int		is_neg;
 	char	*nbr;
 
 	is_neg = 0;
-	cast_n = (long) n;
-	len_nbr = int_len((long) n);
+	cast_n = (long)n;
+	len_nbr = int_len((long)n);
 	nbr = (char *)malloc((len_nbr + 1) * sizeof(char));
 	if (!nbr)
-		return NULL;
+		return (NULL);
 	if (n < 0)
 	{
 		cast_n = -cast_n;
@@ -52,7 +52,7 @@ char	*ft_itoa(int n)
 		is_neg = 1;
 	}
 	nbr[len_nbr] = '\0';
-	while (len_nbr > (size_t) is_neg)
+	while (len_nbr > (size_t)is_neg)
 	{
 		nbr[len_nbr - 1] = (cast_n % 10) + 48;
 		cast_n /= 10;
