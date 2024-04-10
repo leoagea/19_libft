@@ -6,51 +6,75 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 22:23:49 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/22 00:15:01 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/10 23:09:58 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	is_set(char c, char const *set)
+static int	is_set(char c, char const *set)
+{
+	while (*set)
+	{
+		if (c == *set++)
+			return (1);
+	}
+	return (0);
+}
+
+static char	*create_trimmed_string(const char *s1, size_t start, size_t end)
+{
+	char	*s_trimmed;
+	size_t	i;
+
+	s_trimmed = (char *)malloc((end - start + 2) * sizeof(char));
+	if (!s_trimmed)
+		return (NULL);
+	i = 0;
+	while (start <= end)
+	{
+		s_trimmed[i++] = s1[start++];
+	}
+	s_trimmed[i] = '\0';
+	return (s_trimmed);
+}
+
+static size_t	find_start(const char *s1, const char *set)
 {
 	size_t	index;
 
 	index = 0;
-	while (set[index])
-	{
-		if (c == set[index])
-			return (0);
+	while (s1[index] && is_set(s1[index], set))
 		index++;
-	}
-	return (1);
+	return (index);
+}
+
+static size_t	find_end(const char *s1, const char *set, size_t len)
+{
+	size_t	index;
+
+	index = len - 1;
+	while (index > 0 && is_set(s1[index], set))
+		index--;
+	return (index);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*new_s;
-	size_t	index;
-	size_t	len_str;
-	size_t	index_start;
-	size_t	index_end;
+	size_t	start;
+	size_t	end;
+	size_t	len;
 
-	index_start = 0;
-	index_end = ft_strlen(s1) - 1;
-	while (!is_set(s1[index_start], set))
-		index_start++;
-	while (!is_set(s1[index_end], set))
-		index_end--;
-	len_str = (index_end - index_start) + 2;
-	new_s = (char *)malloc((len_str) * sizeof(char));
-	if (!new_s)
+	if (!s1 || !set)
 		return (NULL);
-	index = 0;
-	while (index_start <= index_end)
-	{
-		new_s[index] = s1[index_start];
-		index++;
-		index_start++;
-	}
-	new_s[len_str - 1] = '\0';
-	return (new_s);
+	len = ft_strlen(s1);
+	if (len == 0)
+		return (ft_strdup(""));
+	start = find_start(s1, set);
+	if (s1[start] == '\0')
+		return (ft_strdup(""));
+	end = find_end(s1, set, len);
+	if (start > end)
+		return (ft_strdup(""));
+	return (create_trimmed_string(s1, start, end));
 }
