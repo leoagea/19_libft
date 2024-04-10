@@ -55,4 +55,5 @@ dkms.conf
 main
 *.txt
 .vscode/settings.json
-libftTester
+.libftTester/
+
