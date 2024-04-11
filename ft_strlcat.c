@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 23:43:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/10 12:56:09 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/11 11:55:04 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,6 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	j = 0;
 	len_dst = ft_strlen(dst);
-	if (!dst || !src)
-		return (0);
 	while (dst[i])
 		i++;
 	while (src[j] && (i + j + 1) < (dstsize))
