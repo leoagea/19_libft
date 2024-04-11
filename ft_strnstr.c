@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:40:54 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/10 13:37:58 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/11 11:57:04 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 
 	i = 0;
 	j = 0;
-	if (!str || !to_find)
-		return (NULL);
+	// if (!str || !to_find)
+	// 	return (NULL);
 	if (*to_find == '\0')
 		return ((char *)str);
 	while (str[i] && i < len)
