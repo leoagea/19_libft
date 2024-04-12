@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 23:43:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 15:41:51 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/12 23:55:53 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 		return (ft_strlen(src) + len_dst);
 }
 
-int main()
-{
-	char* s = "";
-	char d[10];
+// int main()
+// {
+// 	char* s = "";
+// 	char d[10];
 
-	ft_strlcat
-}
+// 	ft_strlcat
+// }
