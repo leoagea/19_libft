@@ -6,11 +6,16 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:00:30 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/10 12:56:19 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/12 15:35:59 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static char *check_string_get_len(char const *s1, const char *s2, int *s1_len,int *s2_len)
+{
+	*s1_len = ft_strlen9
+}
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -20,6 +25,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	const int	len_s2 = ft_strlen(s2);
 
 	index = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	new_s = (char *)malloc((len_s1 + len_s2 + 1) * sizeof(char));
 	if (!new_s)
 		return (NULL);

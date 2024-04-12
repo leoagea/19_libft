@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:15:05 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 14:44:21 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/12 17:54:39 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ char	*malloc_len_word(char const *s, char c)
 	return (new);
 }
 
+// free les malloc si ils s allouent mal
 char	**ft_split(char const *s, char c)
 {
 	int		i;
@@ -67,7 +68,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	index = 0;
-	if (!s)
+	if (s!)
 		return (NULL);
 	nbr_words = count_strings(s, c);
 	news_s = (char **)malloc((nbr_words + 1) * sizeof(char *));
