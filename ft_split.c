@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:15:05 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 17:54:39 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/12 23:59:28 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	index = 0;
-	if (s!)
+	if (!s)
 		return (NULL);
 	nbr_words = count_strings(s, c);
 	news_s = (char **)malloc((nbr_words + 1) * sizeof(char *));
