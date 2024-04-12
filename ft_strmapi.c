@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 23:46:57 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/10 12:55:28 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/12 14:45:56 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*new_s;
 
 	index = 0;
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	new_s = (char *)malloc((len + 1) * sizeof(char));
 	if (!new_s)
