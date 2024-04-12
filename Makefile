@@ -41,7 +41,7 @@ bonus:	${OBJ} ${OBJB}
 		${AR} ${NAME} $^
 
 clean:
-			rm -f ${OBJS}
+			rm -f ${OBJS} ${OBJB} 
 
 fclean:		clean
 			rm -f ${NAME}
