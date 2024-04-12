@@ -6,13 +6,13 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:15:05 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/11 11:59:25 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/12 14:44:21 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	malloc_strings(char const *s, char c)
+int	count_strings(char const *s, char c)
 {
 	int	index;
 	int	nbr_words;
@@ -67,7 +67,9 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	index = 0;
-	nbr_words = malloc_strings(s, c);
+	if (!s)
+		return (NULL);
+	nbr_words = count_strings(s, c);
 	news_s = (char **)malloc((nbr_words + 1) * sizeof(char *));
 	if (!news_s)
 		return (NULL);
