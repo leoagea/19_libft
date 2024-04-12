@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:00:30 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 15:35:59 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/12 23:58:18 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char *check_string_get_len(char const *s1, const char *s2, int *s1_len,int *s2_len)
-{
-	*s1_len = ft_strlen9
-}
+// static char *check_string_get_len(char const *s1, const char *s2,
+	int *s1_len,int *s2_len)
+// {
+// 	*s1_len = ft_strlen9
+// }
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
