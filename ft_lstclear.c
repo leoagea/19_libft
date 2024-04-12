@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 22:49:46 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/11 13:15:16 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/12 14:50:22 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*temp;
 	t_list	*current;
 
-	current = *lst;
 	if (!lst || !del)
 		return ;
+	current = *lst;
 	while (current)
 	{
 		temp = current;
