@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 15:15:05 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 23:59:28 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/14 23:41:54 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 	int		nbr_words;
 	char	**news_s;
 
-	i = 0;
+	i = -1;
 	index = 0;
 	if (!s)
 		return (NULL);
@@ -79,10 +79,7 @@ char	**ft_split(char const *s, char c)
 		while (s[index] == c && s[index])
 			index++;
 		if (s[index] != '\0')
-		{
-			news_s[i] = malloc_len_word(&s[index], c);
-			i++;
-		}
+			news_s[++i] = malloc_len_word(&s[index], c);
 		while (s[index] != c && s[index])
 			index++;
 	}
