@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 00:10:01 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 14:43:25 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/14 23:34:34 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (!s)
 		return (NULL);
-	if (ft_strlen(s) == 0)
+	if (start >= ft_strlen(s) || ft_strlen(s) == 0)
 		len = 0;
-	if (start >= ft_strlen(s))
-		len = 0;
-	if (start < ft_strlen(s) && len > ft_strlen(s + start)) 
+	if (start < ft_strlen(s) && len > ft_strlen(s + start))
 		len = ft_strlen(s + start);
 	if (start > ft_strlen(s))
 		return (ft_strdup(""));
