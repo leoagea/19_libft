@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 19:07:17 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 23:55:08 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/15 01:43:29 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_atoi(const char *str)
 {
 	int		res;
 	int		sign;
-	long	overflow;
+	// long	overflow;
 
 	res = 0;
 	sign = 1;
@@ -38,12 +38,12 @@ int	ft_atoi(const char *str)
 		res *= 10;
 		res += (*str - 48);
 		str++;
-		overflow = res;
-		// printf("%lld ",overflow);
-		if (overflow * 10 > INT_MAX && sign == 1)
-			return (-1);
-		else if (overflow / 10 < INT_MIN && sign == -1)
-			return (0);
+		// overflow = res;
+		// // printf("%lld ",overflow);
+		// if (overflow * 10 > INT_MAX && sign == 1)
+		// 	return (-1);
+		// else if (overflow / 10 < INT_MIN && sign == -1)
+		// 	return (0);
 	}
 	return ((int)res * sign);
 }
