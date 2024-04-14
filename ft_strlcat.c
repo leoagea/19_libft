@@ -6,7 +6,7 @@
 /*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 23:43:13 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 23:55:53 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/15 01:37:21 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 	i = 0;
 	j = 0;
-	len_dst = ft_strlen(dst);
-	if (!src && !dst && dstsize == 0)
+	if ((!src || !dst) && dstsize == 0)
 		return (0);
+	len_dst = ft_strlen(dst);
 	while (dst[i])
 		i++;
 	while (src[j] && (i + j + 1) < (dstsize))
@@ -37,11 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	else
 		return (ft_strlen(src) + len_dst);
 }
-
-// int main()
-// {
-// 	char* s = "";
-// 	char d[10];
-
-// 	ft_strlcat
-// }
