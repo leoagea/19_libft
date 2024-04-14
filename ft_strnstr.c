@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
+/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 22:40:54 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/11 11:59:50 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/15 01:38:24 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strnstr(const char *str, const char *to_find, size_t len)
 	j = 0;
 	if (*to_find == '\0')
 		return ((char *)str);
+	if ((!str || !to_find) && len == 0)
+		return (0);
 	while (str[i] && i < len)
 	{
 		j = 0;
