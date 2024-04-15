@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 17:42:10 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/11 21:00:50 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/15 16:55:53 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (dst > src && (const unsigned char *)dst < ((const unsigned char *)src
 			+ len))
 	{
-		/*Overlap*/
 		while (len--)
 			((unsigned char *)dst)[len] = ((unsigned char *)src)[len];
 	}
 	else
 	{
-		/*No overlap*/
 		i = 0;
 		while (i < len)
 		{

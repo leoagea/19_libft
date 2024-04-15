@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 19:55:48 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 14:46:47 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/15 18:29:52 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,3 @@ void	ft_putstr_fd(char *s, int fd)
 		length++;
 	write(fd, s, length);
 }
-/*
-int main (void)
-{
-	int fichier;
-
-	fichier = open("test.txt", O_RDWR);
-	printf("%d\n",fichier);
-	ft_putstr_fd("Test de ft_putstr_fd.",fichier);
-	close(fichier);
-}*/

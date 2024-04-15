@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 21:34:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/03/24 02:24:35 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/15 18:29:47 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	print_nb(long n, int fd)
+static void	print_nb(long n, int fd)
 {
 	if (n / 10)
 	{
