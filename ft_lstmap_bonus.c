@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/23 23:05:46 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/15 18:28:20 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/15 18:33:11 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_lst;
 	t_list	*new_node;
-	void *last_lst_content;
-	
+	void	*last_lst_content;
+
 	if (!lst || !f || !del)
 		return (NULL);
 	new_lst = NULL;
