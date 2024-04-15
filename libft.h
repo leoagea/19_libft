@@ -3,20 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lagea < lagea@student.s19.be >             +#+  +:+       +#+        */
+/*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 01:26:11 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 23:54:01 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/15 18:44:04 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #define LIBFT_H
 #ifdef LIBFT_H
 
-# include <fcntl.h>
-# include <limits.h>
 # include <stddef.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
