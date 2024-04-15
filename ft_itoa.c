@@ -6,13 +6,13 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/21 19:25:36 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/10 12:48:56 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/15 18:23:03 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	int_len(long n)
+static int	int_len(long n)
 {
 	size_t	len_nbr;
 

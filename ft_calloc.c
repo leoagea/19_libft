@@ -6,7 +6,7 @@
 /*   By: lagea <lagea@student.s19.be>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/20 21:29:34 by lagea             #+#    #+#             */
-/*   Updated: 2024/04/12 15:47:29 by lagea            ###   ########.fr       */
+/*   Updated: 2024/04/15 16:37:22 by lagea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,10 @@
 void	*ft_calloc(size_t count, size_t size)
 {
 	void	*res;
-	size_t test;
+	size_t	test;
 
 	test = count * size;
-	if ((test / size) != count)
-		return (NULL);
-	if (size != 0 && count > (-1 / size))
+	if (size != 0 && (test / size) != count)
 		return (NULL);
 	res = (void *)malloc(count * size);
 	if (!res)
