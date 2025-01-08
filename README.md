@@ -1,6 +1,6 @@
 # libft
 
-This repository contains my implementation of the **libft** project from [42](https://www.42.fr/). The goal of this project is to reimplement various standard C library functions, as well as additional utility functions that are commonly used in C development.
+This repository contains my implementation of the [libft](docs/en.subject.pdf) project from [42](https://www.42.fr/). The goal of this project is to reimplement various standard C library functions, as well as additional utility functions that are commonly used in C development.
 
 ![Score of the project](docs/ProjectResults.png)
 
@@ -115,20 +115,27 @@ The bonus part of **libft** typically involves handling singly linked lists, inc
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/libft.git
+   git clone https://github.com/leoagea/19_libft.git
+   ```
 
 2. **Go into the directory:**
    ```bash
    cd libft
+   ```
    
 3. **Compile the library**
    ```bash
    make
+   ```
+
 ### Usage
 
 1. **Include the library head**
    ```bash
    #include "libft.h"
+   ```
+
 2. **Link the library**
    ```bash
    gcc -Wall -Wextra -Werror -I includes/ main.c -L. -lft -o your_program
+   ```
